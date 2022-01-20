@@ -45,6 +45,10 @@
   outline: 2px solid var(--color-orange);
 }
 
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+  outline: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--color-white);
