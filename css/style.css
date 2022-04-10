@@ -45,10 +45,6 @@
   outline: 2px solid var(--color-orange);
 }
 
-[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
-  outline: none;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--color-white);
@@ -285,6 +281,11 @@ button {
   width: 100%;
 }
 
+.search-input:focus-visible {
+  outline: none;
+}
+
+
 .hide {
   position: absolute;
   visibility: hidden;
@@ -437,15 +438,15 @@ button {
 }
 
 .slide-1 {
-  background-image: url("../img/jpg/low-angle-photo-of-balconies.jpg");
+  background-image: url("../img/jpg/pic_1.webp");
 }
 
 .slide-2 {
-  background-image: url("../img/jpg/pic_1.jpg");
+  background-image: url("../img/jpg/pic_2.webp");
 }
 
 .slide-3 {
-  background-image: url("../img/jpg/pic_2.jpg");
+  background-image: url("../img/jpg/pic_3.webp");
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -487,7 +488,7 @@ button {
   display: flex;
   align-items: flex-end;
   width: 49%;
-  background-image: url(../img/jpg/Rectangle2.jpg);
+  background-image: url(../img/jpg/Rectangle2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -625,6 +626,11 @@ button {
   color: var(--color-dark);
   transition: color 0.3s;
 }
+
+.working__day-link.active {
+  color: var(--color-orange);
+}
+
 .working__day-link:hover {
   color: var(--color-orange);
 }
@@ -633,6 +639,7 @@ button {
   color: var(--color-dark-orange);
 }
 
+.working__day-link.active:before,
 .working__day-link:hover:before {
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
@@ -773,20 +780,20 @@ button {
 
 .tab-one::after {
   content: "";
-  background-image: url(../img/jpg/Rectangle18.jpg);
+  background-image: url(../img/jpg/tab1.webp);
 }
 
 .tab-two::after {
   content: "";
-  background-image: url(../img/jpg/tab2.jpg);
+  background-image: url(../img/jpg/tab2.webp);
 }
 .tab-three::after {
   content: "";
-  background-image: url(../img/jpg/tab3.jpg);
+  background-image: url(../img/jpg/tab3.webp);
 }
 .tab-four::after {
   content: "";
-  background-image: url(../img/jpg/tab4.jpg);
+  background-image: url(../img/jpg/tab4.webp);
 }
 /* FAQ */
 
@@ -831,7 +838,7 @@ button {
 
 .faq__question:first-child:hover,
 .faq__question:hover,
-.faq__question:focus {
+.faq__question:focus-visible {
   border-color: var(--color-orange);
 }
 
@@ -868,20 +875,20 @@ button {
 }
 
 .faq__heading:hover,
-.faq__heading:focus {
+.faq__heading:focus-visible {
   color: var(--color-orange);
   outline: none;
 }
 
 .faq__heading:hover .head-icon,
-.faq__heading:focus .head-icon {
+.faq__heading:focus-visible .head-icon {
   background-color: var(--color-orange);
 }
 
 .faq__heading:hover .head-icon::before,
 .faq__heading:hover .head-icon::after,
-.faq__heading:focus .head-icon::before,
-.faq__heading:focus .head-icon::after {
+.faq__heading:focus-visible .head-icon::before,
+.faq__heading:focus-visible .head-icon::after {
   background-color: var(--color-white);
 }
 
@@ -1187,10 +1194,6 @@ textarea::placeholder {
 }
 
 @media (max-width: 1024px) {
-  body.lock {
-    overflow: hidden;
-  }
-
   .container {
     margin: 0 auto;
     padding-left: 50px;
@@ -1199,6 +1202,7 @@ textarea::placeholder {
   }
 
   .header__container {
+    position: relative;
     align-items: center;
     justify-content: space-between;
   }
@@ -1247,8 +1251,7 @@ textarea::placeholder {
   }
 
   .header__nav {
-    display: none;
-    position: fixed;
+    position: absolute;
     align-items: flex-start;
     top: 0;
     left: -100px;
@@ -1258,14 +1261,12 @@ textarea::placeholder {
     background-color: var(--color-white);
     z-index: 3;
     padding: 162px 15px 217px 50px;
-    transition-property: all;
-    transition-duration: 0.5s;
     transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
   }
 
   .header__nav.is-active {
-    display: block;
     transform: translateX(100px);
   }
 
@@ -1294,17 +1295,16 @@ textarea::placeholder {
   }
 
    .nav-search-form {
-  right: 50px;
+    right: 50px;
   }
 
   .search.search-active {
-  right: 95px;
-}
+    right: 95px;
+  }
 
-.search-close.search-active {
-  right: 50px;
-}
-
+  .search-close.search-active {
+    right: 50px;
+  }
 
   /* HERO */
 

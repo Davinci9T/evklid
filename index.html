@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <title>Евклид</title>
 </head>
@@ -24,8 +24,8 @@
         <span class="burger__line"></span>
         <span class="burger__line"></span>
       </button>
-      <a href="" class="header__logo">
-        <picture>
+      <a href="#" class="header__logo">
+        <picture aria-hidden="true">
           <source srcset="img/svg/Logo320.svg" media="(max-width: 320px)" />
           <source srcset="img/svg/Logo768+.svg" media="(max-width: 1024px)" />
           <source srcset="img/svg/Logo1770.svg" media="(min-width: 1025px)" />
@@ -43,7 +43,7 @@
       </nav>
       <div class="header__nav-search">
         <form action="#" method="GET" autocomplete="on" class="nav-search-form" id="form">
-          <input type="text" placeholder="Что будем искать?" class="search-input" id="#search-input" />
+          <input type="text" placeholder="Что будем искать?" class="search-input" id="search-input" />
         </form>
         <button type="submit" class="search" id="search" aria-label="найти">
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@
           <div class="about__card card-big">
             <div class="about__card-info">
               <p class="about__card-text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
-              <a href="#" class="btn about-btn" aria-label="Подробнее">Подробнее</a>
+              <a href="#" class="btn about-btn">Подробнее</a>
             </div>
           </div>
           <div class="about__card-wrapper">
@@ -141,8 +141,8 @@
                 современные исследования подвергнуты целой серии независимых исследований. Кстати, &nbsp;стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако
                 конкретные выводы, разумеется, призваны к ответу.</p>
               <div class="working__btns">
-                <button class="btn working__btn" aria-label="Подробнее">Подробнее</button>
-                <button class="btn working__btn-pact" aria-label="Договор">Договор</button>
+                <button class="btn working__btn">Подробнее</button>
+                <button class="btn working__btn-pact">Договор</button>
               </div>
             </div>
           </div>
@@ -156,8 +156,8 @@
                 современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования
                 подвергнуты целой серии независимых исследований.</p>
               <div class="working__btns">
-                <button class="btn working__btn" aria-label="Подробнее">Подробнее</button>
-                <button class="btn working__btn-pact" aria-label="Договор">Договор</button>
+                <button class="btn working__btn">Подробнее</button>
+                <button class="btn working__btn-pact">Договор</button>
               </div>
             </div>
           </div>
@@ -172,8 +172,8 @@
                 системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального
                 сообщества.</p>
               <div class="working__btns">
-                <button class="btn working__btn" aria-label="Подробнее">Подробнее</button>
-                <button class="btn working__btn-pact" aria-label="Договор">Договор</button>
+                <button class="btn working__btn">Подробнее</button>
+                <button class="btn working__btn-pact">Договор</button>
               </div>
             </div>
           </div>
@@ -187,8 +187,8 @@
                 опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности
                 позволяет.</p>
               <div class="working__btns">
-                <button class="btn working__btn" aria-label="Подробнее">Подробнее</button>
-                <button class="btn working__btn-pact" aria-label="Договор">Договор</button>
+                <button class="btn working__btn">Подробнее</button>
+                <button class="btn working__btn-pact">Договор</button>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@
 
     <!-- FAQ -->
 
-    <section class="faq">
+    <!-- <section class="faq">
       <div class="container faq__container">
         <h2 class="faq__page-title">Часто задаваемые вопросы</h2>
         <ul class="faq__questions js-accordion">
@@ -239,7 +239,7 @@
             </div>
           </li>
           <li class="faq__question">
-            <h3 class="faq__heading">Могу ли я делегировать вам работу <span class="symbol">/</span> согласование <br class="faq__br" />с подрядчиком <span class="symbol">/</span>организацией?<span class="head-icon"></span></h3>
+            <h3 class="faq__heading">Могу ли я делегировать вам работу <span class="symbol">/</span> согласование <br class="faq__br" />с подрядчиком <span class="symbol">/</span> организацией?<span class="head-icon"></span></h3>
             <div class="content">
               <p class="text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего
                 проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут
@@ -264,7 +264,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <!-- Footer -->
@@ -333,10 +333,10 @@
   </footer>
 
   <button id="button" aria-label="наверх"></button>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
   <script src="node_modules/focus-visible/dist/focus-visible.min.js"></script>
+  <script src="JS/swiper-bundle.min.js"></script>
   <script src="JS/main.js"></script>
 </body>
 
