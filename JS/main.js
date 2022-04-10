@@ -1,4 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
+  /*=============== LOADER ===============*/
+  onload = () => {
+    const load = document.getElementById('load')
+
+    setTimeout(() => {
+      load.style.display = 'none'
+    }, 1000)
+  }
 
   // hero-СЛАЙДЕР ======================================================================================================================================================
 
