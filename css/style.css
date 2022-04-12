@@ -32,6 +32,10 @@
   --color-dark: #333333;
 }
 
+html {
+  scroll-behavior: smooth
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
